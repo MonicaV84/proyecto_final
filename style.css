@@ -1,0 +1,594 @@
+:root {
+  --main-bg-color:  #2F3C4E;
+  --text-color: #FEFEFA;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes border-box {
+from {opacity: 0;}
+to {opacity: 1;}
+}
+
+
+/* ################################# BARRA DE NAVEGACIÓN ############################# */
+.header {
+  background-image: url("images/playa.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navbar {
+  background-color: rgba(16, 11, 13, 0.5);
+  font-family: 'Comfortaa', cursive;
+  font-size: 1.5rem;
+  padding: 1em;
+  padding-right: 2em;
+  padding-bottom: 1em;
+}
+
+
+
+.navbar ul, li, a {
+  display: flex;
+  text-decoration: none;
+  list-style-type: none;
+  justify-content: end;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding-left: 1em;
+  color: var(--text-color);
+}
+.navbar a:hover {
+  color: cyan;
+}
+
+
+/* ############################################# HERO SECTION ################################### */
+
+
+.hero {
+  display: block;
+background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--text-color);
+  font-family: 'Comfortaa', cursive;
+  padding-top: 7em;
+  padding-bottom: 10em;
+}
+
+.hero h2 {
+  text-align: center;
+  padding: 0.5em;
+  font-size: 2rem;
+}
+
+.hero-box {
+  background-color: rgba(16, 11, 13, 0.7);
+  display: block;
+  margin: 0 auto;
+  border: solid 4px;
+  border-color: transparent;
+  opacity: 0;
+  border-radius: 2%;
+  width: fit-content;
+  padding: 2em;
+  animation-name: border-box;
+  animation-duration: 5s;
+  animation-delay: 50ms;
+  animation-fill-mode: forwards;
+}
+
+
+/* ################################## MAIN SECTION ####################################### */
+
+
+.main-section{
+  display: grid;
+  padding-top: 1em;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: #f6f6f6;
+}
+.main-section h3 {
+  grid-column: span 4;
+  grid-row: 1;
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+  font-size: 2em;
+  font-weight: bold;
+  padding: 2em;
+}
+
+
+/* ############################### ASIDE (INPUT-RANGE) ############################# */
+
+
+.ranges {
+  margin: 15em auto;
+  grid-row: 2;
+  grid-column: 1;
+  font-family: 'Comfortaa', cursive;
+  border-right: 1px solid #b5b2b2;
+  padding-right: 2em;
+  padding-top: 6em;
+  background-color: #f6f6f6;
+}
+
+.ranges h4 {
+  padding: 0.5em;
+}
+
+.price-range{
+  margin-top: 2em;
+  padding: 0.5em;
+  text-align: center;
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+} 
+
+
+.day-range{
+  margin-top: 2em;
+  padding: 0.5em;
+  text-align: center;
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+} 
+
+
+/* ############################## PERSONALIZACIÓN DEL SLIDER ########################## */
+
+
+.slider {
+  -webkit-appearance: none;
+  outline:none;
+  width: 80%;
+  height: 5px;
+  background-color: cyan;
+  border-radius: 3px;
+  box-shadow: 0px 1px 4px 1px #b5b2b2;
+  opacity: 0.9;
+
+}
+.slider {
+  appearance: none;
+  width: 80%;
+  height: 5px;
+  background-color: cyan;
+  border-radius: 3px;
+  box-shadow: 0px 1px 4px 1px #b5b2b2;
+  opacity: 0.9;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-precio {
+  padding-top: 2em;
+  text-align: left;
+  font-family: 'Comfortaa', cursive;
+  font-size: 1em;
+  color: var(--text-color);
+}
+
+.price-range::after {
+  content: '70k';
+  color: var(--text-color);
+  font-family: 'Comfortaa', cursive;
+  font-size: 0.9em;
+  position: absolute;
+  margin-left: 4%;
+  margin-top: -2.5%;
+}
+.price-range::before{
+  content: '11k';
+  color: var(--text-color);
+  font-family: 'Comfortaa', cursive;
+  font-size: 0.9em;
+  position: absolute;
+  margin-left: -5%;
+  margin-top: 3%;
+}
+
+
+.slider-dias {
+  padding-top: 1.5em;
+  text-align: left;
+}
+
+.day-range::after {
+  content: '9';
+  color: var(--text-color);
+  font-family: 'Comfortaa', cursive;
+  font-size: 0.9em;
+  position: absolute;
+  margin-left: 4%;
+  margin-top: -2%;
+}
+.day-range::before{
+  content: '3';
+  color: var(--text-color);
+  font-family: 'Comfortaa', cursive;
+  font-size: 0.9em;
+  position: absolute;
+  margin-left: -5%;
+  margin-top: 3%;
+}
+
+
+
+/* ############################### CARD SECTION ############################## */
+
+
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 0.5em;
+  row-gap: 3em;
+  grid-column: span 3;
+  padding-left: 1em;
+  text-align: center;
+  padding-right: 3em;
+  padding-bottom: 3em;
+  }
+
+.card-container img {
+  width: 300px;
+  height: 168px;
+}
+
+.card {
+border-right: 0.1em solid var(--main-bg-color);
+  border-bottom: 0.2em solid #b5b2b2;
+  
+}
+
+.duracion{
+  font-family: 'Comfortaa', cursive;
+}
+
+.precio{
+  font-family: 'Comfortaa', cursive;
+  font-size: 2em;
+}
+
+.legal{
+  font-family: 'Comfortaa', cursive;
+  font-size: 0.7em;
+  font-weight: lighter;
+}
+
+.destino {
+  font-family: 'Comfortaa', cursive;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.btn {
+  width: 80%;
+  height: 50px;
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+  font-family: 'Comfortaa', cursive;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.btn:hover {
+  cursor: pointer;
+  border: 1px solid cyan;
+  color: cyan;
+  width: 82%px;
+  height: 52px;
+}
+/* ##################################   SECCIÓN RECOMENDADOS ##################################*/
+
+.video {
+  padding-top: 1em;
+  background-color: #f6f6f6;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.recomendado {
+  background-color: #f6f6f6;
+  padding-bottom: 1.5em;
+  font-family: 'Comfortaa', cursive;
+  font-size: 2em;
+  text-align: center;
+}
+
+.ytvideo {
+  margin-left: 36%;
+  margin-right: auto;
+  padding-bottom: 2em;
+}
+
+
+/* ############################# TABLA DE STAFF ############################*/
+
+.staff {
+  border-collapse: collapse;
+  background-color: #b5b2b2;
+  min-width: 400px;
+  font-family: 'Comfortaa', cursive;
+  text-align: center;
+}
+
+.staff h3{
+  text-align: center;
+  font-size: 2em;
+  padding: 2em;
+}
+
+.staff-table {
+  margin-left: 25%;
+  margin-right: auto;
+  padding-bottom: 3em;
+} 
+
+
+.staff-table img {
+  width: 200px;
+  height: 200px;
+}
+.staff-table tbody {
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.staff-table th,
+.staff-table td {
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+
+}
+
+
+
+
+
+/*######################################## FORMULARIO DE CONTACTO ######################################*/
+
+
+
+.contact-form {
+  background-color: var(--main-bg-color);
+  width: 100%;
+  height: 10%;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+
+.form-box {
+  display: block;
+  max-width: 30em;
+  margin-left:35%;
+  margin-right: auto;
+  padding: 1em;
+  border-right: 0.2em solid #b5b2b2;
+  border-top: 0.1em solid #b5b2b2;
+  border-radius: 2%;
+}
+.form-elements {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.form-elements p {
+  text-align: left;
+  color: var(--text-color);
+  font-family: 'Comfortaa', cursive;
+  padding-top: 1em;
+}
+
+.name {
+  width: 100%;
+  height: 3em;
+  border: 1px solid #b5b2b2;
+  border-radius: 2%;
+  background-color: var(--text-color);
+  font-family: 'Comfortaa', cursive;
+}
+
+.email {
+  width: 100%;
+  height: 3em;
+  border: 1px solid #b5b2b2;
+  border-radius: 2%;
+  background-color: var(--text-color);
+  font-family: 'Comfortaa', cursive;
+}
+
+.mensaje {
+  border: 1px solid #b5b2b2;
+  border-radius: 1%;
+  background-color: var(--text-color);
+  width: 480px;
+  font-family: 'Comfortaa', cursive;
+  
+
+}
+
+/* #################################### PERSONALIZACIÓN DE LOS BOTONES ####################################*/
+
+.form-buttons {
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-around;
+}
+.send {
+  width: 71px;
+  height: 30px;
+  color: var(--main-bg-color);
+  font-family: 'Comfortaa', cursive;
+  background-color: cyan;
+  border: cyan;
+  margin-right: 3px;
+  border-radius: 3px;
+}
+
+.send:hover {
+  width: 73px;
+  height: 31px;
+  cursor: pointer;
+}
+
+.cancel {
+  width: 70px;
+  height: 30px;
+  color: var(--main-bg-color);
+  font-family: 'Comfortaa', cursive;
+  background-color: cyan;
+  border: cyan;
+  border-radius: 3px;
+}
+
+.cancel:hover {
+  width: 73px;
+  height: 31px;
+  cursor: pointer;
+
+}
+
+.backtotop{
+  display: flex;
+  text-align: left;
+
+  margin-top: auto;
+  background-color: var(--main-bg-color);
+  padding-bottom: 1em; 
+  padding-left: 3em; 
+
+}
+.backtotop a {
+    font-family: 'Comfortaa', cursive;
+  font-size: 0.9em;
+  font-weight: lighter;
+  color: cyan;
+}
+
+.footer {
+  padding: 1em;
+  background-color: black;
+  color: var(--text-color);
+  font-family: 'Comfortaa', cursive;
+  font-size: 1em;
+}
+
+
+/* #################### RESPONSIVE LAYAOUT #################################*/
+
+@media screen and (max-width: 810px) {
+  .main-section {
+    grid-column: 1/ -1;
+  }
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 13%;
+    padding-top: 3em;
+  }
+  .ranges {
+    grid-column: 1/ -1;
+    margin: 3px;
+    padding: 3px;
+    border: none;
+  }
+  .ranges h3 {
+    margin: 3px;
+    padding: 3px;
+  }
+  .price-range {
+    margin-top: 0;
+  }
+  .ytvideo {
+    margin-left: 15%;
+  }
+  .staff-table {
+    margin-left: 11%;
+  }
+  .staff-table img {
+    width: 100px;
+    height: 100px;
+  }
+  .form-box {
+    margin-left: 18%;
+  }
+  }
+@media screen and (max-width: 809px) {
+  .main-section {
+    grid-column: 1/ -1;
+  }
+  .card-container {
+    grid-template-columns: 1fr;
+    margin-left: 13%;
+    padding-top: 3em;
+  }
+  .ranges {
+    grid-column: 1/ -1;
+    margin: 3px;
+    padding: 3px;
+    border: none;
+  }
+  .ranges h3 {
+    margin: 3px;
+    padding: 3px;
+  }
+  .price-range {
+    margin-top: 0;
+  }
+  .ytvideo {
+    margin-left: 1.5%;
+    width: 400px;
+
+  }
+  .staff-table {
+    margin-left: 4%;
+    font-size: 0.6em;
+  }
+  .staff-table img {
+    width: 50px;
+    height: 50px;
+  }
+  .form-box {
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
+    
+  }
+  .mensaje {
+    width: 100%
+  }
+   }
+
+
+
+
+

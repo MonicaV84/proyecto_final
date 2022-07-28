@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+  <title>Agencia de viajes</title>
+</head>
+
+<!-- ################################# BARRA DE NAVEGACIÓN #############################-->
+
+
+<body>
+  <header class="header" id="headerid">
+    <nav class="navbar">
+      <ul>
+        <li><a href="#contactid">Contacto</a></li>
+        <li><a href="#staffid">Staff</a></li>
+        <li><a href="reservas.html">Mis pasajes</a></li>
+      </ul>
+    </nav>
+    <section class="hero" id="hero">
+      <div class="hero-box">
+        <h2>Elegí</h2>
+        <h2>tu destino</h2>
+      </div>
+    </section>
+  </header>
+
+  <!-- ########################## ASIDE ################################# -->
+
+
+  <main class="main-section">
+    <aside class="ranges">
+      <div class="price-range">
+        <h4>Elegí el rango de precio</h4>
+        <input type="range" name="price" min="11000" max="70000" value="11000" class="slider" id="price-slider">
+        <p class="slider-precio">Precio: <span id="precioid"></span></p>
+      </div>
+
+      <div class="day-range">
+        <h4>Elegí la cantidad de días</h4>
+        <input type="range" name="days" min="3" max="9" value="3" class="slider" id="day-slider">
+        <p class="slider-dias">Días: <span id="diasid"></span></p>
+      </div>
+    </aside>
+
+    <!-- ################################ CARD SECTION ############################### -->
+
+
+    <h3>Destinos</h3>
+
+    <section class="card-container" id="card-container">
+      <div class="card" id="card">
+        <img src="" alt="">
+        <div class="card-info">
+          <p class="destino"></p>
+          <p class="duracion"></p>
+          <p class="precio"></p>
+          <p class="legal"></p>
+          <form>
+            <button formaction="reservas.html" type="" class="btn" id="card-btn"></button>
+          </form>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+
+
+  <!-- ########################## VIDEO ############################# -->
+
+
+
+  <section class="video">
+    <h3 class="recomendado">Recomendado</h3>
+
+    <iframe class="ytvideo" width="560" height="315" src="https://www.youtube.com/embed/2b95-GndQew"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </section>
+
+
+  <!-- ######################### TABLA DE STAFF ############################ -->
+
+
+  <section class="staff" id="staffid">
+    <h3>Conocé a nuestro staff</h3>
+
+    <table class="staff-table">
+      <thead>
+        <tr>
+          <th>Lucía Prizzi</th>
+          <th>Lucas Gentile</th>
+          <th>luis Gallardo</th>
+          <th>Vanesa Torres y <br> Ana Vallejos</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td><img src="images/gerentegeneral.jpg" alt="Gerente General"></td>
+          <td><img src="images/gerenteatcliente.jpg" alt="Gerente de atención al cliente"></td>
+          <td><img src="images/gerenteventas.jpg" alt="Gerente de ventas"></td>
+          <td><img src="images/rrhh.jpg" alt="Directoras de Recursos humanos"></td>
+        </tr>
+
+
+        <tr>
+          <td>Gerente General</td>
+          <td>Gerente de atención <br> al cliente</td>
+          <td>Gerente de ventas</td>
+          <td>Directoras de RRHH</td>
+
+        </tr>
+
+      </tbody>
+
+
+    </table>
+
+  </section>
+
+
+
+
+  <!-- #################### FORMULARIO DE CONTACTO ############################# -->
+
+
+  <section class="contact-form" id="contactid">
+    <div class="form-box">
+      <div class="form-elements">
+        <p>Nombre</p>
+        <input type="text" name="name" class="name" id="form-name" placeholder="Nombre" required>
+        <p>Email</p>
+        <input type="email" name="email" class="email" id="form-email" placeholder="email" required>
+        <p>Dejanos un mensaje</p>
+        <textarea rows="10" cols="30" class="mensaje"></textarea>
+
+
+        <div class="form-buttons">
+          <button type="reset" class="cancel" id="form-button-cancel">Cancelar</button>
+          <button type="submit" class="send" id="form-button-send">Enviar</button>
+        </div>
+        <div class="whatsapp">
+          <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+          <div class="elfsight-app-3a57ecbc-c7b5-42c6-b0e4-18f3c70a9655"></div>
+        </div>
+
+  </section>
+
+  <div class="backtotop">
+    <a href="#headerid">Volver arriba</a>
+  </div>
+
+  <!-- ########################## FOOTER ################################-->
+
+
+  <footer class=" footer">
+    <p>Copyright 2022. Todos los derechos reservados.</p>
+  </footer>
+  <script src="script.js"></script>
+
+</body>
